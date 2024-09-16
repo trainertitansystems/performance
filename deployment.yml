@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: java 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: java
+  template:
+    metadata:
+      labels:
+        app: java 
+    spec:
+      containers:
+        - name: java 
+          image: myacr6bea8344.azurecr.io/java
+          ports:
+          - containerPort: 8080
