@@ -1,19 +1,19 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: java 
+  name: fareapp
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: java
+      app: fareapp
   template:
     metadata:
       labels:
-        app: java 
+        app: fareapp
     spec:
       containers:
-        - name: java 
-          image: myacr6bea8344.azurecr.io/java
+        - name: fareapp 
+          image: myacr6bea8344.azurecr.io/fareapp
           ports:
           - containerPort: 8080
