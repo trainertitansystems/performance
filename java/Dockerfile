@@ -1,7 +1,7 @@
 FROM openjdk:11-alpine
 
 # Copy the JAR file to the container
-COPY target/*.jar /app.jar
+COPY app/build/libs/app.jar /app.jar
 
 # Set the working directory
 WORKDIR /app
